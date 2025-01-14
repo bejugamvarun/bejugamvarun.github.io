@@ -17,7 +17,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     props: {
       postData,
     },
-    revalidate: 10,  // ISR
+    // revalidate: 10,  // ISR
   };
 }
 
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
   const paths = getAllPostSlugs();
   return {
     paths,
-    fallback: 'blocking',  // ISR
+    fallback: 'false',  // ISR
   };
 }
 

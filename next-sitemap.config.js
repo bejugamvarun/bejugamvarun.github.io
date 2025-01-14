@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: 'https://yourdomain.com',
+    siteUrl: 'https://bejugamvarun.github.io',
     generateRobotsTxt: true,
   };
   

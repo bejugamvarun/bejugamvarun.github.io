@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://bejugamvarun.github.io
+
+# Sitemaps
+Sitemap: https://bejugamvarun.github.io/sitemap.xml

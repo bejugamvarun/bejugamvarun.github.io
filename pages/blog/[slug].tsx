@@ -26,7 +26,7 @@ export async function getStaticPaths() {
   const paths = getAllPostSlugs();
   return {
     paths,
-    fallback: 'false',  // ISR
+    fallback: false,  // ISR
   };
 }
 

@@ -1,10 +1,4 @@
-:root {
-  --toggle-bg: #080808; /* Default toggle background color */
-  --toggle-bg-dark: #f8f4f4; /* Toggle background color for dark mode */
-  --nav-bg: #1e1e1e;
-  --text-color: #f8f8f8;
-  --hover-color: #ff9900;
-}
+
 
 .header {
   width: 100%;

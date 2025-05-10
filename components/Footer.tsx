@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from '@/styles/Footer.module.css';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaSquareXTwitter } from 'react-icons/fa6';
+import { SiHuggingface, SiLeetcode } from 'react-icons/si';
 
 const Footer: React.FC = () => {
   return (
@@ -13,6 +15,15 @@ const Footer: React.FC = () => {
           </a>
           <a href="https://github.com/bejugamvarun" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub />
+          </a>
+          <a href="https://x.com/bejugamvarun" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <FaSquareXTwitter />
+          </a>
+          <a href="https://huggingface.co/bejugamvarun" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face">
+            <SiHuggingface />
+          </a>
+          <a href="https://leetcode.com/u/varun0603/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+            <SiLeetcode />
           </a>
           <a href="mailto:bejugamvarun@gmail.com" aria-label="Email">
             <FaEnvelope />

@@ -1,41 +1,99 @@
+:root {
+  --toggle-bg: #080808; /* Default toggle background color */
+  --toggle-bg-dark: #f8f4f4; /* Toggle background color for dark mode */
+  --nav-bg: #1e1e1e;
+  --text-color: #f8f8f8;
+  --hover-color: #ff9900;
+}
+
 .header {
-    width: 100%;
-    padding: 1rem 2rem;
-    background-color: var(--nav-bg);
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background-color: var(--nav-bg);
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo a {
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--text-color);
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 .navLinks {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
 .navLinks a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.toggleBtn {
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
+.navLinks a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: var(--hover-color);
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.navLinks a:hover {
+  color: var(--hover-color);
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.themeToggleContainer {
+  margin-left: 1rem;
+}
+
+.toggleContainer {
+  width: 60px;
+  height: 30px;
+  background-color: var(--button-bg);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12 2 12 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleSwitch {
+  width: 25px;
+  height: 25px;
+  background-color: var(--toggle-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.toggleSwitch.dark {
+  transform: translateX(30px);
+}
+
+.icon {
+  font-size: 1.2rem;
 }

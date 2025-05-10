@@ -5,7 +5,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const nextConfig: NextConfig = {
   /* config options here */
   // output: 'export',
-  basePath: '/bejugamvarun.github.io',
+  basePath: isProd ? '/bejugamvarun.github.io' : '',
   images: {
     unoptimized: true,
   },

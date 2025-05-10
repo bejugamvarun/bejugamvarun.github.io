@@ -5,9 +5,11 @@ const ThemeToggle: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <button onClick={toggleTheme} className={styles.toggleBtn}>
-      {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}
-    </button>
+    <div className={styles.toggleContainer} onClick={toggleTheme}>
+      <div className={`${styles.toggleSwitch} ${theme === 'dark' ? styles.dark : ''}`}>
+        <span className={styles.icon}>{theme === 'light' ? '☀️' : '🌙'}</span>
+      </div>
+    </div>
   );
 };
 

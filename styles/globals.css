@@ -1,15 +1,17 @@
 /* Light Theme */
 :root {
   --background-color: #ffffff;
-  --text-color: #000000;
+  --text-color: #000000; /* Ensure this is set for light mode */
   --nav-bg: #f8f9fa;
   --button-bg: #000000;
   --button-text: #ffffff;
   --toggle-bg: #080808; /* Default toggle background color */
   --toggle-bg-dark: #f8f4f4; /* Toggle background color for dark mode */
   --nav-bg: #1e1e1e;
-  --text-color: #f8f8f8;
+  --text-color-dark: #f8f8f8;
   --hover-color: #ff9900;
+  --header-footer-bg-light: #747070; /* Updated lighter background color for header and footer in light mode */
+  --header-footer-bg-dark: #1e1e1e; /* Background color for header and footer in dark mode */
 }
 
 /* Dark Theme */
@@ -39,6 +41,18 @@ header,
 footer {
   background-color: var(--nav-bg);
   transition: background-color 0.3s ease;
+}
+
+/* Ensure header and footer use the correct background colors */
+header,
+footer {
+  background-color: var(--header-footer-bg-light); /* Default to light mode */
+  transition: background-color 0.3s ease;
+}
+
+[data-theme='dark'] header,
+[data-theme='dark'] footer {
+  background-color: var(--header-footer-bg-dark); /* Use dark mode color */
 }
 
 button {

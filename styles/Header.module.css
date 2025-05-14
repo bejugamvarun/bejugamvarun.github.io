@@ -1,17 +1,24 @@
-
-
 .header {
   width: 100%;
   padding: 1.5rem 2rem;
-  background-color: var(--nav-bg);
+  background-color: var(--header-footer-bg-light); /* Default to light mode */
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+[data-theme='dark'] .header {
+  background-color: var(--header-footer-bg-dark); /* Use dark mode color */
+}
+
 .navbar {
   display: flex;
+  background-color: var(--header-footer-bg-light); /* Default to light mode */
   justify-content: space-between;
   align-items: center;
+}
+
+[data-theme='dark'] .navbar {
+  background-color: var(--header-footer-bg-dark); /* Use dark mode color */
 }
 
 .logo a {

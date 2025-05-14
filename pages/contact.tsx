@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import React, { useState } from 'react';
+import styles from '../styles/Contact.module.css';
 
 const Contact: React.FC = () => {
   const [name, setName] = useState('');
@@ -13,13 +14,35 @@ const Contact: React.FC = () => {
 
   return (
     <Layout>
-      <h1>Contact</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} required />
-        <button type="submit">Send</button>
-      </form>
+      <div className={styles.contactContainer}>
+        <h1 className={styles.title}>Contact Me</h1>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            className={styles.input}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className={styles.input}
+          />
+          <textarea
+            placeholder="Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+            className={styles.textarea}
+          />
+          <button type="submit" className={styles.button}>Send</button>
+        </form>
+      </div>
     </Layout>
   );
 };

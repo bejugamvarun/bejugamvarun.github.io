@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { SiHuggingface } from 'react-icons/si';
 import Layout from '../components/Layout';
@@ -54,10 +54,10 @@ const Contact: React.FC = () => {
 
   return (
     <Layout>
-      <NextSeo
-        title="Contact | Varun Kumar Bejugam"
-        description="Get in touch with Varun Kumar Bejugam — AI/ML engineer at Goldman Sachs."
-      />
+      <Head>
+        <title>Contact | Varun Kumar Bejugam</title>
+        <meta name="description" content="Get in touch with Varun Kumar Bejugam — AI/ML engineer at Goldman Sachs." />
+      </Head>
 
       <div style={{ position: 'relative', zIndex: 1 }}>
         <div className="container section">

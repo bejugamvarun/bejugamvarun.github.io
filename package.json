@@ -12,24 +12,25 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "^15.3.2",
-    "next-seo": "^6.6.0",
+    "next": "^16.2.1",
+    "next-seo": "^7.2.0",
     "next-sitemap": "^4.2.3",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-icons": "^5.4.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-icons": "^5.6.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
-    "@types/react": "^19.1.4",
-    "@types/react-dom": "^19.1.5",
-    "eslint": "^9",
-    "eslint-config-next": "^15.3.2",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5"
+    "@eslint/eslintrc": "^3.3.5",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^10.1.0",
+    "eslint-config-next": "^16.2.1",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.9.3"
   }
 }

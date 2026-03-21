@@ -1,14 +1,23 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import { ThemeProvider } from '@/context/ThemeContext';
-import SEO from '@/next-seo.config';
-import { DefaultSeo } from 'next-seo';
 import Script from 'next/script';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
-      <DefaultSeo {...SEO} />
+      <Head>
+        <title>Varun Kumar Bejugam | AI/ML Engineer</title>
+        <meta name="description" content="Software Engineer and AI/ML researcher at Goldman Sachs. Building intelligent systems at the intersection of AI and finance." />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content="https://bejugamvarun.github.io/bejugamvarun.github.io" />
+        <meta property="og:site_name" content="Varun Kumar Bejugam" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@bejugamvarun" />
+        <meta name="twitter:creator" content="@bejugamvarun" />
+      </Head>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-DV5LRNT5KK"
         strategy="afterInteractive"

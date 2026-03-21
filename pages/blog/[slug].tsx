@@ -1,5 +1,5 @@
+import Head from 'next/head';
 import Link from 'next/link';
-import { NextSeo } from 'next-seo';
 import Layout from '../../components/Layout';
 import { getAllPostSlugs, getPostData } from '../../lib/markdown';
 
@@ -26,10 +26,10 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 const Post: React.FC<Props> = ({ postData }) => (
   <Layout>
-    <NextSeo
-      title={`${postData.title} | Varun Kumar Bejugam`}
-      description={postData.excerpt || postData.title}
-    />
+    <Head>
+      <title>{`${postData.title} | Varun Kumar Bejugam`}</title>
+      <meta name="description" content={postData.excerpt || postData.title} />
+    </Head>
 
     <div style={{ position: 'relative', zIndex: 1 }}>
       <div

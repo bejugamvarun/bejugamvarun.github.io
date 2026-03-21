@@ -1,4 +1,4 @@
-import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 
 const PROJECTS = [
@@ -90,10 +90,10 @@ const accentBorder = (a: 'amber' | 'cyan' | 'green') =>
 
 const Projects: React.FC = () => (
   <Layout>
-    <NextSeo
-      title="Projects | Varun Kumar Bejugam"
-      description="Professional and personal projects by Varun Kumar Bejugam — GenAI systems at Goldman Sachs, banking infrastructure, and ML projects."
-    />
+    <Head>
+      <title>Projects | Varun Kumar Bejugam</title>
+      <meta name="description" content="Professional and personal projects by Varun Kumar Bejugam — GenAI systems at Goldman Sachs, banking infrastructure, and ML projects." />
+    </Head>
 
     <div style={{ position: 'relative', zIndex: 1 }}>
       <div className="container section">

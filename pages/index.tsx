@@ -1,5 +1,6 @@
+import Head from 'next/head';
 import Link from 'next/link';
-import { NextSeo } from 'next-seo';
+import { ProfilePageJsonLd } from 'next-seo';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import { SiHuggingface } from 'react-icons/si';
@@ -89,10 +90,29 @@ const Home: React.FC<Props> = ({ recentPosts }) => {
 
   return (
     <Layout>
-      <NextSeo
-        title="Varun Kumar Bejugam | AI/ML Engineer"
-        description="Software Engineer and AI/ML researcher at Goldman Sachs. Building intelligent systems at the intersection of AI and finance."
-        canonical="https://bejugamvarun.github.io/"
+      <Head>
+        <title>Varun Kumar Bejugam | AI/ML Engineer</title>
+        <meta name="description" content="Software Engineer and AI/ML researcher at Goldman Sachs. Building intelligent systems at the intersection of AI and finance." />
+        <link rel="canonical" href="https://bejugamvarun.github.io/bejugamvarun.github.io" />
+      </Head>
+      <ProfilePageJsonLd
+        dateCreated="2024-01-01"
+        dateModified={new Date().toISOString().split('T')[0]}
+        mainEntity={{
+          '@type': 'Person',
+          name: 'Varun Kumar Bejugam',
+          givenName: 'Varun Kumar',
+          familyName: 'Bejugam',
+          alternateName: 'Varun Bejugam',
+          description: 'Software Engineer and AI/ML researcher at Goldman Sachs. Building multi-agent LLM systems and cloud infrastructure for regulatory finance.',
+          url: 'https://bejugamvarun.github.io/bejugamvarun.github.io',
+          sameAs: [
+            'https://linkedin.com/in/bejugamvarun',
+            'https://github.com/bejugamvarun',
+            'https://x.com/bejugamvarun',
+            'https://huggingface.co/bejugamvarun',
+          ],
+        }}
       />
 
       <NeuralBackground />

@@ -1,5 +1,5 @@
+import Head from 'next/head';
 import Link from 'next/link';
-import { NextSeo } from 'next-seo';
 import Layout from '../../components/Layout';
 import { getSortedPostsData } from '../../lib/markdown';
 
@@ -22,10 +22,10 @@ export async function getStaticProps() {
 
 const Blog: React.FC<Props> = ({ allPosts }) => (
   <Layout>
-    <NextSeo
-      title="Blog | Varun Kumar Bejugam"
-      description="Thoughts on AI, machine learning, software engineering, and building at Goldman Sachs."
-    />
+    <Head>
+      <title>Blog | Varun Kumar Bejugam</title>
+      <meta name="description" content="Thoughts on AI, machine learning, software engineering, and building at Goldman Sachs." />
+    </Head>
 
     <div style={{ position: 'relative', zIndex: 1 }}>
       <div className="container section">

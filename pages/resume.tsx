@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 
 const Resume: React.FC = () => {
@@ -9,10 +9,10 @@ const Resume: React.FC = () => {
 
   return (
     <Layout>
-      <NextSeo
-        title="Resume | Varun Kumar Bejugam"
-        description="Resume of Varun Kumar Bejugam — AI/ML Engineer at Goldman Sachs."
-      />
+      <Head>
+        <title>Resume | Varun Kumar Bejugam</title>
+        <meta name="description" content="Resume of Varun Kumar Bejugam — AI/ML Engineer at Goldman Sachs." />
+      </Head>
 
       <div style={{ position: 'relative', zIndex: 1 }}>
         <div className="container section">

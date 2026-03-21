@@ -7,11 +7,19 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => (
-  <>
+  <div
+    style={{
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      position: 'relative',
+      zIndex: 1,
+    }}
+  >
     <Header />
-    <main>{children}</main>
+    <main style={{ flex: 1, paddingTop: 'var(--nav-height)' }}>{children}</main>
     <Footer />
-  </>
+  </div>
 );
 
 export default Layout;

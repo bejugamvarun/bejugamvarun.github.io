@@ -21,8 +21,12 @@ export default function App({ Component, pageProps }: AppProps) {
           gtag('config', 'G-DV5LRNT5KK');
         `}
       </Script>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1655204887552510"
-     crossOrigin="anonymous"></script>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1655204887552510"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       <Component {...pageProps} />
     </ThemeProvider>
   );

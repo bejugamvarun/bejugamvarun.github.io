@@ -183,6 +183,7 @@ function runCommand(raw: string): { lines: TermLine[]; action?: () => void; clea
             { type: 'blank',  text: '' },
             { type: 'output', text: '01  Why I\'m Betting on LangChain for Production AI' },
             { type: 'output', text: '02  ControlNet and the Geometry of Human Motion' },
+            { type: 'output', text: '03  Agentic Workflows for Financial Metric Analysis' },
             { type: 'blank',  text: '' },
             { type: 'info',   text: 'read them → /blog' },
           ],

@@ -91,8 +91,9 @@ const Home: React.FC<Props> = ({ recentPosts }) => {
   return (
     <Layout>
       <Head>
-        <title>Varun Kumar Bejugam | AI/ML Engineer</title>
-        <meta name="description" content="Software Engineer and AI/ML researcher at Goldman Sachs. Building intelligent systems at the intersection of AI and finance." />
+        <title>Varun Kumar Bejugam | AI/ML Engineer at Goldman Sachs</title>
+        <meta name="description" content="Varun Kumar Bejugam — Software Engineer and AI/ML researcher at Goldman Sachs. Building multi-agent LLM systems at the intersection of AI and finance." />
+        <meta name="keywords" content="Varun Kumar Bejugam, Varun Bejugam, AI ML Engineer, Goldman Sachs, machine learning, LLM, multi-agent systems" />
         <link rel="canonical" href="https://bejugamvarun.github.io/bejugamvarun.github.io" />
       </Head>
       <ProfilePageJsonLd
@@ -104,6 +105,12 @@ const Home: React.FC<Props> = ({ recentPosts }) => {
           givenName: 'Varun Kumar',
           familyName: 'Bejugam',
           alternateName: 'Varun Bejugam',
+          jobTitle: 'Software Engineer & AI/ML Researcher',
+          worksFor: {
+            '@type': 'Organization',
+            name: 'Goldman Sachs',
+            url: 'https://www.goldmansachs.com',
+          },
           description: 'Software Engineer and AI/ML researcher at Goldman Sachs. Building multi-agent LLM systems and cloud infrastructure for regulatory finance.',
           url: 'https://bejugamvarun.github.io/bejugamvarun.github.io',
           sameAs: [

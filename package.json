@@ -11,6 +11,8 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
+    "@google/adk": "^1.0.0",
+    "@google/generative-ai": "^0.24.1",
     "gray-matter": "^4.0.3",
     "katex": "^0.16.45",
     "next": "^16.2.1",

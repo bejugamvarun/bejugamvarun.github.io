@@ -6,7 +6,9 @@
       "Bash(npx next:*)",
       "Bash(./node_modules/.bin/next lint:*)",
       "Bash(npm outdated:*)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }

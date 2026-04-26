@@ -98,7 +98,7 @@ const Home: React.FC<Props> = ({ recentPosts }) => {
       </Head>
       <ProfilePageJsonLd
         dateCreated="2024-01-01T00:00:00.000Z"
-        dateModified={new Date().toISOString()}
+        dateModified="2026-04-26T00:00:00.000Z"
         mainEntity={{
           '@type': 'Person',
           name: 'Varun Kumar Bejugam',

@@ -195,7 +195,6 @@ export default function ChatWidget() {
           temperature: 0.7,
           maxOutputTokens: 1024,
           // Disable thinking output for Gemma 4 / thinking models
-          ...(selectedModel.id.startsWith('gemma-4') ? { thinkingConfig: { thinkingBudget: 0 } } as any : {}),
         },
       });
 

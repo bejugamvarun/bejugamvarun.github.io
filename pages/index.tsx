@@ -119,7 +119,7 @@ const Home: React.FC<Props> = ({ recentPosts }) => {
             'https://x.com/bejugamvarun',
             'https://huggingface.co/bejugamvarun',
           ],
-        }}
+        } as any}
       />
 
       <NeuralBackground />

@@ -23,8 +23,8 @@ export async function getStaticProps() {
 const Blog: React.FC<Props> = ({ allPosts }) => (
   <Layout>
     <Head>
-      <title>Blog | Varun Kumar Bejugam</title>
-      <meta name="description" content="Thoughts on AI, machine learning, software engineering, and building at Goldman Sachs." />
+      <title>Writing | Varun Kumar Bejugam</title>
+      <meta name="description" content="Thoughts on AI research, particle physics, software engineering, and building at the intersection of ML and finance." />
     </Head>
 
     <div style={{ position: 'relative', zIndex: 1 }}>
@@ -34,14 +34,14 @@ const Blog: React.FC<Props> = ({ allPosts }) => (
           <div className="section-label">Writing</div>
           <h1
             style={{
-              fontFamily: 'var(--font-display)',
+              fontFamily: 'var(--font-mono)',
               fontSize: 'clamp(2rem, 5vw, 3.5rem)',
               fontWeight: 800,
               letterSpacing: '-0.04em',
               marginBottom: '1rem',
             }}
           >
-            Blog
+            stdout
           </h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', maxWidth: 520, lineHeight: 1.7 }}>
             Thoughts on AI research, engineering at scale, and what I&apos;m learning at the
@@ -75,105 +75,120 @@ const Blog: React.FC<Props> = ({ allPosts }) => (
             </p>
           </div>
         ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-            {allPosts.map((post, i) => (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+            {allPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
                 style={{
-                  display: 'flex',
-                  alignItems: 'flex-start',
-                  gap: '1.5rem',
-                  background: 'var(--surface)',
-                  border: '1px solid var(--border)',
+                  display: 'block',
+                  background: 'var(--surface-2)',
+                  border: '1px solid var(--border-bright)',
                   borderRadius: 'var(--radius-lg)',
-                  padding: '1.5rem',
-                  transition: 'border-color 0.2s, transform 0.18s',
+                  padding: '2rem 2.25rem',
                   textDecoration: 'none',
+                  transition: 'border-color 0.2s, box-shadow 0.2s, transform 0.18s',
+                  position: 'relative',
+                  overflow: 'hidden',
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget as HTMLElement;
                   el.style.borderColor = 'var(--amber)';
-                  el.style.transform = 'translateX(4px)';
+                  el.style.transform = 'translateY(-2px)';
+                  el.style.boxShadow = '0 8px 32px rgba(240,180,41,0.08)';
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget as HTMLElement;
                   el.style.borderColor = 'var(--border)';
-                  el.style.transform = 'translateX(0)';
+                  el.style.transform = 'translateY(0)';
+                  el.style.boxShadow = 'none';
                 }}
               >
-                {/* Index number */}
+                {/* Amber accent bar */}
                 <div
                   style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '0.7rem',
-                    color: 'var(--text-dim)',
-                    paddingTop: '0.2rem',
-                    flexShrink: 0,
-                    minWidth: 28,
-                    textAlign: 'right',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: 3,
+                    height: '100%',
+                    background: 'var(--amber)',
+                    opacity: 0.5,
+                    borderRadius: '4px 0 0 4px',
+                  }}
+                />
+
+                {/* Date + read time row */}
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.75rem',
+                    marginBottom: '0.75rem',
                   }}
                 >
-                  {String(i + 1).padStart(2, '0')}
-                </div>
-
-                {/* Content */}
-                <div style={{ flex: 1 }}>
-                  <div
+                  <span
                     style={{
                       fontFamily: 'var(--font-mono)',
-                      fontSize: '0.65rem',
+                      fontSize: '0.7rem',
                       color: 'var(--amber)',
-                      marginBottom: '0.4rem',
-                      letterSpacing: '0.05em',
+                      letterSpacing: '0.06em',
                     }}
                   >
                     {post.date}
-                  </div>
-                  <h2
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h2
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontWeight: 700,
+                    fontSize: '1.35rem',
+                    letterSpacing: '-0.02em',
+                    lineHeight: 1.25,
+                    marginBottom: post.excerpt ? '0.75rem' : '1rem',
+                    color: 'var(--text)',
+                  }}
+                >
+                  {post.title}
+                </h2>
+
+                {/* Excerpt */}
+                {post.excerpt && (
+                  <p
                     style={{
-                      fontFamily: 'var(--font-display)',
-                      fontWeight: 700,
-                      fontSize: '1.1rem',
-                      letterSpacing: '-0.01em',
-                      marginBottom: post.excerpt ? '0.4rem' : 0,
-                      color: 'var(--text)',
+                      fontSize: '0.9rem',
+                      color: 'var(--text-muted)',
+                      lineHeight: 1.7,
+                      marginBottom: '1.25rem',
+                      maxWidth: '72ch',
                     }}
                   >
-                    {post.title}
-                  </h2>
-                  {post.excerpt && (
-                    <p
-                      style={{
-                        fontSize: '0.875rem',
-                        color: 'var(--text-muted)',
-                        lineHeight: 1.6,
-                        marginBottom: post.tags?.length ? '0.75rem' : 0,
-                      }}
-                    >
-                      {post.excerpt}
-                    </p>
-                  )}
-                  {post.tags && post.tags.length > 0 && (
-                    <div style={{ display: 'flex', gap: '0.3rem', flexWrap: 'wrap' }}>
+                    {post.excerpt}
+                  </p>
+                )}
+
+                {/* Footer row: tags + arrow */}
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  {post.tags && post.tags.length > 0 ? (
+                    <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
                       {post.tags.map((t) => (
                         <span key={t} className="tag">{t}</span>
                       ))}
                     </div>
-                  )}
-                </div>
+                  ) : <span />}
 
-                <span
-                  style={{
-                    color: 'var(--text-muted)',
-                    fontSize: '1rem',
-                    paddingTop: '0.2rem',
-                    flexShrink: 0,
-                    transition: 'color 0.2s',
-                  }}
-                >
-                  →
-                </span>
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '0.8rem',
+                      color: 'var(--text-dim)',
+                    }}
+                  >
+                    read →
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

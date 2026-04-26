@@ -461,6 +461,18 @@ code, kbd, samp, pre {
   border: 1px solid var(--border);
 }
 
+.prose .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1.25rem 0;
+  margin: 1.5em 0;
+}
+
+.prose .katex {
+  color: var(--text);
+  font-size: 1em;
+}
+
 /* ==============================
    Responsive Helpers
 ============================== */

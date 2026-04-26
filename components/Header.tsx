@@ -6,10 +6,10 @@ const NAV = [
   { href: '/', label: 'home' },
   { href: '/experience', label: 'experience' },
   { href: '/projects', label: 'projects' },
-  { href: '/blog', label: 'blog' },
+  { href: '/blog', label: 'stdout', tooltip: 'Writing — thoughts on AI, physics & engineering' },
   { href: '/resume', label: 'resume' },
   { href: '/contact', label: 'contact' },
-];
+] as const;
 
 const Header: React.FC = () => {
   const router = useRouter();
@@ -107,10 +107,11 @@ const Header: React.FC = () => {
                 <li key={item.href}>
                   <Link
                     href={item.href}
+                    title={'tooltip' in item ? item.tooltip : undefined}
                     style={{
                       display: 'block',
                       fontFamily: 'var(--font-mono)',
-                      fontSize: '0.78rem',
+                      fontSize: '0.88rem',
                       padding: '0.38rem 0.75rem',
                       borderRadius: '6px',
                       color: active ? 'var(--amber)' : 'var(--text-muted)',
@@ -216,7 +217,7 @@ const Header: React.FC = () => {
                 style={{
                   display: 'block',
                   fontFamily: 'var(--font-mono)',
-                  fontSize: '0.9rem',
+                  fontSize: '1rem',
                   color: active ? 'var(--amber)' : 'var(--text-muted)',
                   padding: '0.75rem 0',
                   borderBottom: '1px solid var(--border)',

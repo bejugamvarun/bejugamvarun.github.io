@@ -5,7 +5,8 @@
       "Bash(npm run:*)",
       "Bash(npx next:*)",
       "Bash(./node_modules/.bin/next lint:*)",
-      "Bash(npm outdated:*)"
+      "Bash(npm outdated:*)",
+      "Bash(npm install *)"
     ]
   }
 }

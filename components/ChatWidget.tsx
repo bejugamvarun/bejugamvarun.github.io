@@ -18,8 +18,7 @@ interface ModelOption {
 }
 
 const MODELS: ModelOption[] = [
-  { id: 'gemma-4-27b-it',       label: 'Gemma 4 27B',          search: false },
-  { id: 'gemma-3-27b-it',       label: 'Gemma 3 27B',          search: false },
+  { id: 'gemma-4-31b-it',        label: 'Gemma 4 31B',         search: false },
   { id: 'gemini-2.0-flash-lite', label: 'Gemini Flash Lite',   search: true  },
 ];
 

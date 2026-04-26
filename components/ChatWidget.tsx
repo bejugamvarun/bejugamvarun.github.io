@@ -33,7 +33,7 @@ Your purpose:
 
 Tone: Knowledgeable, terse, a little nerdy. Like talking to a senior engineer who reads physics papers for fun.`;
 
-const WELCOME = `portfolio_agent v1.0 — Gemini + Google Search
+const WELCOME = `portfolio_agent v1.0 — Gemma 3 · Google AI
 ──────────────────────────────────────────
 Ask me about Varun's work, physics, AI/ML,
 or anything from stdout.`;
@@ -76,8 +76,7 @@ export default function ChatWidget() {
 
       const genAI = new GoogleGenerativeAI(apiKey);
       const model = genAI.getGenerativeModel({
-        model: 'gemini-2.0-flash',
-        tools: [{ googleSearch: {} }] as any,
+        model: 'gemma-4-31b-it',
         systemInstruction: SYSTEM_PROMPT,
       });
 
@@ -198,7 +197,7 @@ export default function ChatWidget() {
                 border: '1px solid rgba(240,180,41,0.2)',
               }}
             >
-              Gemini · Google Search
+              Gemma 3 · Google AI
             </span>
           </div>
 

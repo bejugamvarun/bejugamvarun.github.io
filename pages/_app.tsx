@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Software Engineer and AI/ML researcher at Goldman Sachs. Building intelligent systems at the intersection of AI and finance." />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:url" content="https://bejugamvarun.github.io/bejugamvarun.github.io" />
+        <meta property="og:url" content="https://bejugamvarun.github.io" />
         <meta property="og:site_name" content="Varun Kumar Bejugam" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@bejugamvarun" />

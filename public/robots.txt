@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://bejugamvarun.github.io/bejugamvarun.github.io
+Host: https://bejugamvarun.github.io
 
 # Sitemaps
-Sitemap: https://bejugamvarun.github.io/bejugamvarun.github.io/sitemap.xml
+Sitemap: https://bejugamvarun.github.io/sitemap.xml

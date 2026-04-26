@@ -1,4 +1,4 @@
-const BASE_URL = 'https://bejugamvarun.github.io/bejugamvarun.github.io';
+const BASE_URL = 'https://bejugamvarun.github.io';
 
 export default {
   title: 'Varun Kumar Bejugam | AI/ML Engineer',
